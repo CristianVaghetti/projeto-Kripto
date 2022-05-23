@@ -1,3 +1,8 @@
+Projeto em Laravel para criação de uma "Command" que verifica o preço de uma criptomoeda específica e guarda o preço no banco de dados. Utilizado a API da Binance para coleta dos dados.
+
+=> composer install é o suficiente para instalar as dependências do projeto.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
