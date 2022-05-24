@@ -2,6 +2,8 @@ Projeto em Laravel para criação de uma "Command" que verifica o preço de uma 
 
 => composer install é o suficiente para instalar as dependências do projeto.
 
+=> configure o arquivo ".env" com as informações do banco
+
 Guia de utilização
 
 => primeiramente DEVE rodar o comando
