@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\Price;
 use App\Models\Kripto;
+use Exception;
 
 class saveBidPriceOnDataBase extends Command
 {
@@ -42,18 +43,18 @@ class saveBidPriceOnDataBase extends Command
     {
         $price = Http::get("https://testnet.binancefuture.com/fapi/v1/ticker/price?symbol={$this->argument('symbol')}");
         $savePrice = new Price();
-        $kripto = Kripto::where('symbol', $this->argument('symbol'))->first();
-        if(!$kripto)
-        {
-            echo 'Kripto not found !';
-            return 0;
-        }
+        try{
+            $kripto = Kripto::where('symbol', $this->argument('symbol'))->first();
 
-        $savePrice->symbol = $kripto->id;
-        $savePrice->bidPrice = $price['price'];
-        
-        $savePrice->save();
-        echo 'Done!';
+            $savePrice->symbol = $kripto->id;
+            $savePrice->bidPrice = $price['price'];
+            $savePrice->save();
+
+            echo 'Done!';
+            
+        } catch(Exception $e){
+            echo 'Kripto not found !';
+        }
         return 0;
     }
 }

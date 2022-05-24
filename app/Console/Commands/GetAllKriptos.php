@@ -20,7 +20,7 @@ class GetAllKriptos extends Command
      *
      * @var string
      */
-    protected $description = 'Use this to save all kriptos on a table in database. You MUST do this step, because you will need to have a kripto to link the price which one you are looking for';
+    protected $description = 'Use this to save all kriptos on a table in database. You MUST do this step first of all, because you will need to have a kripto to link the price which one you are looking for';
 
     /**
      * Create a new command instance.
