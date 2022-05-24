@@ -18,7 +18,7 @@ class CreateTablePrices extends Migration
             $table->id();
             $table->unsignedBigInteger('symbol');
             $table->foreign('symbol')->references('id')->on('table_kriptos');
-            $table->float('bidPrice', 9, 9);
+            $table->double('bidPrice');
             $table->timestamps();
         });
     }

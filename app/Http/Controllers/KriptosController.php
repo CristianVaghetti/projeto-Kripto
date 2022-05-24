@@ -35,6 +35,9 @@ class KriptosController extends Controller
         $savePrice = new Price();
         $price = $this->getOne($symbol);
         $kripto = Kripto::where('symbol', $symbol)->first();
+        var_dump($price);
+        var_dump($kripto->symbol);
+        var_dump($kripto->id);
         $savePrice->symbol = $kripto->id;
         $savePrice->bidPrice = $price['price'];
         $savePrice->save();
