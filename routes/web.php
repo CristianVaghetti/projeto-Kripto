@@ -17,7 +17,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('get-all', 'App\Http\Controllers\KriptosController@getKriptos');
-Route::get('get-price/{symbol}', 'App\Http\Controllers\KriptosController@getPrice');
-Route::get('print-one/{symbol?}', 'App\Http\Controllers\KriptosController@getOne');
-
